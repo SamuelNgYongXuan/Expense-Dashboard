@@ -131,7 +131,7 @@ export default {
       // Group by category
       const categoryMap = {}
       data.forEach(expense => {
-        const categoryName = expense.category
+        const categoryName = expense.category.trim()
         
         if (!categoryMap[categoryName]) {
           categoryMap[categoryName] = {
