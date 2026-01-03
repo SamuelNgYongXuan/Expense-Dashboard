@@ -209,7 +209,6 @@ export default {
           <div class="outcome-card-enhanced">
             <!-- Decorative circles -->
             <div class="deco-circle deco-circle-1"></div>
-            <div class="deco-circle deco-circle-2"></div>
             <div class="deco-circle deco-circle-3"></div>
 
             <!-- Content -->
@@ -217,7 +216,6 @@ export default {
               <!-- Header with badge -->
               <div class="outcome-header">
                 <span>Monthly Total</span>
-                <div class="period-badge">{{ monthShort }}</div>
               </div>
 
               <!-- Amount -->
@@ -339,8 +337,8 @@ export default {
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;   /* horizontal center */
+  align-items: center; 
   margin-bottom: 2rem;
 }
 
@@ -398,14 +396,6 @@ export default {
   background: #4e2758;
 }
 
-.deco-circle-2 {
-  top: 63px;
-  right: 50px;
-  width: 60px;
-  height: 60px;
-  background: #8F659A;
-}
-
 .deco-circle-3 {
   bottom: -30px;
   left: -30px;
@@ -417,11 +407,15 @@ export default {
 .outcome-content {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* horizontal centering */
+  text-align: center; 
 }
 
 .outcome-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 0.5rem;
   font-size: 1rem;
@@ -533,6 +527,10 @@ export default {
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center; 
+
 }
 
 .category-list {
